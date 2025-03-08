@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this form to help us identify and fix bugs.</p>
+    <form id="survey-form">
+        <label id="name-label" for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+        <label id="email-label" for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <label id="number-label" for="number">Bug Severity (1-10):</label>
+        <input type="number" id="number" name="number" placeholder="Rate severity" min="1" max="10" required>
+        
+        <label for="dropdown">Bug Category:</label>
+        <select id="dropdown" name="category">
+            <option value="ui">User Interface</option>
+            <option value="performance">Performance</option>
+            <option value="security">Security</option>
+            <option value="functional">Functional</option>
+        </select>
+        
+        <fieldset>
+            <legend>Can you reproduce the bug?</legend>
+            <label><input type="radio" name="reproducible" value="yes"> Yes</label>
+            <label><input type="radio" name="reproducible" value="no"> No</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Bug Effects</legend>
+            <label><input type="checkbox" name="effects" value="crash"> Crashes Application</label>
+            <label><input type="checkbox" name="effects" value="slow"> Causes Slowdowns</label>
+            <label><input type="checkbox" name="effects" value="data"> Data Loss</label>
+        </fieldset>
+        
+        <label for="comments">Bug Description:</label>
+        <textarea id="comments" name="comments" placeholder="Describe the bug in detail..."></textarea>
+        
+        <button id="submit" type="submit">Submit Report</button>
+    </form>
+
+  </body>
+</html>
